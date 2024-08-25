@@ -1,0 +1,33 @@
+# include <iostream>
+ int busquedaSecuencial (int arr [] , int n , int valorBuscado ) {
+ bool encontrado = false ;
+ int posicion = -1;
+ for (int i = 0; i < n; i ++) {
+ if ( arr [i ] == valorBuscado ) {
+ encontrado = true ;
+ posicion = i;
+ break ; // Salir del bucle si se encuentra el elemento
+ }
+ }
+ if ( encontrado ) {
+ return posicion ;
+ } else {
+ return -1; // Si el elemento no se encuentra, se devuelve -1
+ }
+ }
+ int main () {
+ const int n = 5;
+ int arreglo [n] = {10 , 25 , 30 , 15 , 20};
+ int valorBuscado ;
+ std :: cout << " Ingrese el valor que desea buscar : " ;
+ std :: cin >> valorBuscado ;
+ int resultado = busquedaSecuencial ( arreglo , n , valorBuscado );
+ if ( resultado != -1) {
+ std :: cout << " El valor " << valorBuscado << " se encuentra en la posicion " <<
+resultado << std :: endl ;
+ } else {
+ std :: cout << " El valor " << valorBuscado << " no se encuentra en el arreglo ." <<
+std :: endl ;
+ }
+ return 0;
+ }
