@@ -1,0 +1,21 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+   // Crear un arreglo unidimensional de tamaño 5
+int numeros [5];
+// Asignar valores individuales a los elementos del arreglo
+numeros [0] = 10;
+numeros [1] = 20;
+numeros [2] = 30;
+numeros [3] = 40;
+numeros [4] = 50;
+
+// Mostrar los valores del arreglo
+for (int i = 0; i < 5; i ++) {
+cout << " numeros [" << i << "] = " << numeros [i] <<endl ;
+}
+return 0;
+}
