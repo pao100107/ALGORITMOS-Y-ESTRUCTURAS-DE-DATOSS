@@ -1,0 +1,25 @@
+# include <iostream>
+ // Funci´on para intercambiar los valores de dos enteros (llamado por referencia)
+ void swap ( int &a , int &b) {
+ int temp = a;
+ a = b ;
+ b = temp ;
+ }
+ int main () {
+
+ int num1 , num2 ;
+ // Leer dos enteros del usuario
+ std :: cout << " Ingrese el primer entero : ";
+ std :: cin >> num1 ;
+ std :: cout << " Ingrese el segundo entero : ";
+ std :: cin >> num2 ;
+ // Verificar si los enteros est´an en orden ascendente
+ if ( num1 > num2 ) {
+ // Llamar a la funci´on "swap"para intercambiar los valores
+ swap ( num1 , num2 );
+ }
+ // Mostrar los valores despu´es del posible intercambio
+ std :: cout << " Los enteros en orden ascendente son : " << num1 << " " << num2 <<
+std :: endl ;
+ return 0;
+ }
